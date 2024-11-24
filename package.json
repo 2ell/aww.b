@@ -1,0 +1,24 @@
+{
+  "name": "aww.baby",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "watch:sass": "npx sass src/styles.scss:dist/styles.css --watch",
+    "start": "npm run watch:eleventy & npm run watch:sass"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "dayjs": "^1.11.13",
+    "eleventy-plugin-icons": "^4.5.1",
+    "feather-icons": "^4.29.2",
+    "lucide-static": "^0.460.0",
+    "sass": "^1.81.0"
+  }
+}

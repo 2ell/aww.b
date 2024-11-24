@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+<div class="post__header">
+<h1 class="post__title">{{ title }}</h1>
+<div>
+<span class="post__date">{% icon "lucide:calendar" %} {{ page.date | formatDate('MMM D, YYYY') }} </span>
+<span class="post__author"> {% icon "lucide:user-round" %} {{ author.name }}</span>
+</div>
+</div>
+
+<div class="post__body">
+<article>
+    {{ content | safe }}
+</article>
+</div>
+

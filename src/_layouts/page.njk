@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+
+<div class="post__header">
+<h1>{{ title }}</h1>
+<span>updated 
+    {{ page.modified | formatDate('MMM D, YYYY - hh:mm a') }} 
+</span>
+</div>
+
+<div class="post__body">
+<article>
+    {{ content | safe }}
+</article>
+</div>
+

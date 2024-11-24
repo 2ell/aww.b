@@ -1,0 +1,16 @@
+{ 
+    "layout": "post",
+    "date": "Created",
+    "tags": "post",
+    "permalink": "/{ title | slugify }}/",
+    "author": { 
+      "name": "laurel", 
+      "href": "https://aww.baby" 
+    },
+    "bluesky": { 
+      "account": "@aww.baby" 
+    },
+    "mastodon": { 
+      "fediverseCreator": "@laurel@social.lol" 
+    }
+ }

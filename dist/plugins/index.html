@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles.css"/>
+    <title>aww baby</title>
+    </head>
+    <html data theme="light">
+    <div class="site__header">
+  
+  
+  <h1 class="site__title">aww baby</h1>
+
+  <nav aria-labelledby="my-pagination">
+    <ul><li><a href="/plugins/">plugins</a></li></ul>
+  </nav>
+
+  <div id="dark-light-toggle">
+  <button
+    type="button"
+    data-theme-toggle
+    aria-label="Change to light theme"
+  >
+  <span class="light"> 
+<!-- @license lucide-static v0.460.0 - ISC -->
+<svg class="icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="4"/>
+  <path d="M12 2v2"/>
+  <path d="M12 20v2"/>
+  <path d="m4.93 4.93 1.41 1.41"/>
+  <path d="m17.66 17.66 1.41 1.41"/>
+  <path d="M2 12h2"/>
+  <path d="M20 12h2"/>
+  <path d="m6.34 17.66-1.41 1.41"/>
+  <path d="m19.07 4.93-1.41 1.41"/>
+</svg> </span>
+  <span class="dark"> 
+<!-- @license lucide-static v0.460.0 - ISC -->
+<svg class="icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+</svg> </span>
+
+</button>
+  </div>
+
+<script>
+    /**
+    * Utility function to calculate the current theme setting.
+    * Look for a local storage value.
+    * Fall back to system setting.
+    * Fall back to light mode.
+    */
+    function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
+      if (localStorageTheme !== null) {
+        return localStorageTheme;
+      }
+
+      if (systemSettingDark.matches) {
+        return "dark";
+      }
+
+      return "light";
+    }
+
+    /**
+    * Utility function to update the button text and aria-label.
+    */
+    function updateButton({ buttonEl, isDark }) {
+      const newCta = isDark ? "Change to light theme" : "Change to dark theme";
+      // use an aria-label if you are omitting text on the button
+      // and using a sun/moon icon, for example
+      buttonEl.setAttribute("aria-label", newCta);
+      //buttonEl.innerText = newCta;
+    }
+
+    /**
+    * Utility function to update the theme setting on the html tag
+    */
+    function updateThemeOnHtmlEl({ theme }) {
+      document.querySelector("html").setAttribute("data-theme", theme);
+    }
+
+
+    /**
+    * On page load:
+    */
+
+    /**
+    * 1. Grab what we need from the DOM and system settings on page load
+    */
+    const button = document.querySelector("[data-theme-toggle]");
+    const localStorageTheme = localStorage.getItem("theme");
+    const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+    /**
+    * 2. Work out the current site settings
+    */
+    let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
+
+    /**
+    * 3. Update the theme setting and button text accoridng to current settings
+    */
+    updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
+    updateThemeOnHtmlEl({ theme: currentThemeSetting });
+
+    /**
+    * 4. Add an event listener to toggle the theme
+    */
+    button.addEventListener("click", (event) => {
+      const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+
+      localStorage.setItem("theme", newTheme);
+      updateButton({ buttonEl: button, isDark: newTheme === "dark" });
+      updateThemeOnHtmlEl({ theme: newTheme });
+
+      currentThemeSetting = newTheme;
+    }); 
+  </script>
+
+</div>
+
+    <body>
+        <div class="post__header">
+<h1>Plugins</h1>
+<span>posted Nov 24, 2024 </span>
+<span>by </span>
+</div>
+
+<div class="post__body">
+<article>
+    <p><a href="https://dev.to/whitep4nth3r/the-best-lightdark-mode-theme-toggle-in-javascript-368f">Dark/Light Mode</a>
+<a href="https://www.npmjs.com/package/eleventy-plugin-icons#popular-icon-sets">Icons</a></p>
+
+</article>
+</div>
+
+
+    </body>
+
+</html>
