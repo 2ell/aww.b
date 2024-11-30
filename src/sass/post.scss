@@ -1,28 +1,38 @@
 main {
-    margin: 5em 0 0 0;
+    margin: 5em 0 2em  0;
 }
 
-.post__header {
-    width: 40em;
-    margin: 0 auto;
-    padding: 0 0 2em 0;
-    & .icon {
-        color: var(--crust);
-        background-color: var(--mauve);
-        border-radius: 50%;
-        height: 14px;
-        width: 14px;
-        padding: 0.1em;
+.post__collection {
+    list-style-type: none;
+    & li {
+        margin-bottom: 1em;
     }
+    & h2 {
+        margin: 0;
+    }
+    }
+
+
+.post__header {
+    max-width: 60em;
+    margin: 0 auto;
+    padding: 0 0 5em 0;
 }
 
 .post__title {
+    padding: 0 0 0.5em 0;
+    margin: 0 1em 0 1em;
     border-bottom: 1px solid currentColor;
+}
+
+.post__date {
+    margin: 0 2em 0 1em;
+    text-align: right;
 }
 
 
 .body-content {
-    max-width: 40em;
+    max-width: 60em;
     margin: 0 auto;
     padding: 0 1em;
   }

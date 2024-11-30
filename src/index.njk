@@ -5,13 +5,12 @@ eleventyNavigation:
   key: home
 eleventyExcludeFromCollections: true
 ---
-<ul>
+<ul class="post__collection">
   <!-- post list -->
 {%- for post in collections.post -%}
   <li>
-    <a href="{{ post.url }}">{{ post.data.title }}</a>
-    <span>
-      Posted <a href="{{ post.url }}">{{ post.date | formatDate("YYYY-MM-DD") }}</a>
+    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    <span>posted {{ post.date | formatDate("YYYY-MM-DD") }}
     </span>
   </li>
 {%- endfor -%}

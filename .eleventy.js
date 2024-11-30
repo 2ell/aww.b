@@ -34,7 +34,10 @@ export default function(eleventyConfig) {
   //---------------------- Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(pluginIcons, {
-    sources: [{ name: 'lucide', path: 'node_modules/lucide-static/icons' }],
+    sources: [
+      { name: 'lucide', path: 'node_modules/lucide-static/icons' },
+      { name: 'feather', path: 'node_modules/feather-icons/dist/icons' }
+    ],
     icon: {
       shortcode: 'icon',
       delimiter: ':',
