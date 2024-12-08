@@ -1,22 +1,21 @@
-main {
-    margin: 5em 0 2em  0;
-}
-
 .post__collection {
     list-style-type: none;
     & li {
-        margin-bottom: 1em;
+        display: flex;
+        align-items: center;
+        gap: 1em;
     }
     & h2 {
-        margin: 0;
+        text-transform: lowercase;
     }
-    }
+}
+
 
 
 .post__header {
-    max-width: 60em;
+    max-width: 65em;
     margin: 0 auto;
-    padding: 0 0 5em 0;
+    padding: 0 0 3em 0;
 }
 
 .post__title {
@@ -29,10 +28,3 @@ main {
     margin: 0 2em 0 1em;
     text-align: right;
 }
-
-
-.body-content {
-    max-width: 60em;
-    margin: 0 auto;
-    padding: 0 1em;
-  }

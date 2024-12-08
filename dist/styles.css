@@ -1,5 +1,43 @@
 @import url(https://fonts.bunny.net/css?family=ubuntu:400);
 body {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  line-height: 2em;
+}
+
+main {
+  margin: 5em 0 2em 0;
+}
+
+.body-content {
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+#footer {
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+img {
+  margin: 1em 0 0 0;
+  max-width: 100%;
+}
+
+[data-theme=dark] img {
+  opacity: 0.7;
+}
+
+img + :is(p) {
+  margin-top: 0em;
+  text-align: center;
+  font-style: italic;
+  color: var(--subtext);
+}
+
+body {
   --rgb-accent: var(--rgb-mauve);
   --mono-bg: rgb(28, 28, 41);
   --icon-xs: 14px;
@@ -15,17 +53,17 @@ body {
 }
 
 body {
-  background-color: aqua;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  transition: background 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 [data-theme=light] {
-  --crust: rgba(231, 236, 255);
-  --text: rgba(17, 17, 27);
+  --crust: rgb(231, 236, 255);
+  --text: rgb(17, 17, 27);
+  --muted: rgb(124, 127, 147);
   --blue: rgb(30, 102, 245);
   --mauve: rgb(136, 57, 239);
 }
@@ -82,12 +120,12 @@ body {
   --rgb-mantle: 24, 24, 37;
   --crust: rgb(17, 17, 27);
   --rgb-crust: 17, 17, 27;
+  --muted: rgb(108, 112, 134);
 }
 [data-theme=dark] .light {
   display: none;
 }
 
-/* example use of CSS custom properties */
 body {
   background-color: var(--crust);
   color: var(--text);
@@ -96,6 +134,9 @@ body a {
   color: var(--blue);
   text-decoration: none;
 }
+body a:hover {
+  border-bottom: 1px solid currentColor;
+}
 
 .site__header {
   display: flex;
@@ -103,7 +144,6 @@ body a {
   justify-content: space-between;
   margin: 0;
   padding: 1em;
-  background-color: var(--base);
 }
 .site__header .site__title {
   margin: 0;
@@ -112,6 +152,9 @@ body a {
 .site__header .site__title a {
   color: var(--text);
   text-decoration: none;
+}
+.site__header .site__title a:hover {
+  border-bottom: 0;
 }
 .site__header nav ul {
   margin: 0;
@@ -126,47 +169,60 @@ body a {
   border-bottom: 1px solid currentColor;
 }
 
-body {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  line-height: 2em;
+.icon-moon, .icon-sun {
+  color: var(--muted);
 }
 
-img {
-  margin: 1em 0 0 0;
-  max-width: 100%;
+.icon-moon:hover {
+  color: var(--blue);
 }
 
-[data-theme=dark] img {
-  opacity: 0.7;
+.icon-sun:hover {
+  color: var(--peach);
 }
 
-img + :is(p) {
-  margin-top: 0em;
-  text-align: center;
-  font-style: italic;
-  color: var(--subtext);
+footer .icon-heart svg {
+  fill: var(--pink);
+  height: 1em;
+  width: 1em;
 }
 
-main {
-  margin: 5em 0 2em 0;
+.foot-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.foot-1 ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.foot-2 {
+  background-color: skyblue;
+}
+
+.foot-3 {
+  text-align: right;
 }
 
 .post__collection {
   list-style-type: none;
 }
 .post__collection li {
-  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
 .post__collection h2 {
-  margin: 0;
+  text-transform: lowercase;
 }
 
 .post__header {
-  max-width: 60em;
+  max-width: 65em;
   margin: 0 auto;
-  padding: 0 0 5em 0;
+  padding: 0 0 3em 0;
 }
 
 .post__title {
@@ -178,23 +234,6 @@ main {
 .post__date {
   margin: 0 2em 0 1em;
   text-align: right;
-}
-
-.body-content {
-  max-width: 60em;
-  margin: 0 auto;
-  padding: 0 1em;
-}
-
-/* ==========================================================================
-// ANCHOR THEME
-========================================================================== */
-.icon-moon {
-  color: var(--blue);
-}
-
-.icon-sun {
-  color: var(--peach);
 }
 
 * {

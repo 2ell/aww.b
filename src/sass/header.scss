@@ -4,7 +4,6 @@
     justify-content: space-between;
     margin: 0;
     padding: 1em;
-    background-color: var(--base);
   
     & .site__title {
       margin: 0;
@@ -12,6 +11,9 @@
       & a {
         color: var(--text);
         text-decoration: none;
+      &:hover {
+        border-bottom: 0;
+      }
       }
     }
     & nav ul {
@@ -26,4 +28,16 @@
             }
         }
     }
+}
+
+.icon-moon, .icon-sun {
+  color: var(--muted);
+}
+
+.icon-moon:hover {
+  color: var(--blue);
+}
+
+.icon-sun:hover {
+  color: var(--peach);
 }

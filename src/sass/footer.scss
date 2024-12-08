@@ -1,0 +1,30 @@
+footer {
+
+    & .icon-heart svg {
+        fill: var(--pink);
+        height: 1em;
+        width: 1em;
+    }
+}
+
+.foot-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.foot-1 {
+    & ul {
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0;
+    }
+}
+
+.foot-2 {
+    background-color: skyblue;
+}
+
+.foot-3 {
+    text-align: right;
+}
