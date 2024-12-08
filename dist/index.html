@@ -7,7 +7,10 @@
     <title>aww baby</title>
     </head>
     <html data theme="light">
-    <div class="site__header">
+
+    <header><div id="header">
+  
+  <div class="site__header">
   
   <!-- title -->
   <h1 class="site__title">
@@ -46,6 +49,7 @@
 </svg> </span>
   </button>
   </div>
+</div>
 
 <script>
     /**
@@ -122,31 +126,42 @@
   </script>
 
 </div>
+</header>
 
     <body>
       <main>
-        
+        <div class="body-content">
 <!-- post list -->
 <ul class="post__collection" aria-description="List of recent blog posts in reverse-chronological order"><!-- post list item -->
   <li>
-    <!-- post title -->
-    <h2><a href="/a-blog-post/">A Blog Post</a></h2>
+    <div class="li-container">
     <!-- post datestamp -->
-    <span>— Nov 16</span>
-
+     <div class="li-datetime">
+    <span>Nov 16, 2024</span>
+     </div>
+    <!-- post title -->
+     <div class="li-posttitle">
+    <h2><a href="/a-blog-post/">A Blog Post</a></h2>
+     </div>
+</div>
   <!-- post list item END-->
   </li><!-- post list item -->
   <li>
-    <!-- post title -->
-    <h2><a href="/another-blog-post/">Another Blog Post</a></h2>
+    <div class="li-container">
     <!-- post datestamp -->
-    <span>— Nov 16</span>
-
+     <div class="li-datetime">
+    <span>Nov 16, 2024</span>
+     </div>
+    <!-- post title -->
+     <div class="li-posttitle">
+    <h2><a href="/another-blog-post-with-a-longer-title/">Another Blog Post with a Longer Title</a></h2>
+     </div>
+</div>
   <!-- post list item END-->
   </li><!-- post list end -->
 </ul>
 
-
+</div>
     </main>
       </body>
 

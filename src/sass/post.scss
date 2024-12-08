@@ -1,15 +1,32 @@
 .post__collection {
     list-style-type: none;
+    padding: 0;
     & li {
-        display: flex;
-        align-items: center;
-        gap: 1em;
+        border-bottom: 1px solid var(--text);
+        margin-bottom: 3em;
     }
     & h2 {
         text-transform: lowercase;
     }
 }
 
+.post__collection .li-container {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    & .li-datetime {
+        font-size: 0.9em;
+        flex-shrink: 0;
+        align-self: center;
+        flex-wrap: nowrap;
+        padding: 0 0.5em 0 0.5em;
+        background-color: var(--mantle);
+/*        border: 1px solid var(--text);*/
+    }
+    & .li-posttitle {
+        flex-wrap: wrap;
+    }
+}
 
 
 .post__header {

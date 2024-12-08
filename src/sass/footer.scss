@@ -1,5 +1,7 @@
 footer {
-
+    background-color: var(--mantle);
+    width: 100%;
+    font-size: 0.9em;
     & .icon-heart svg {
         fill: var(--pink);
         height: 1em;
@@ -22,7 +24,9 @@ footer {
 }
 
 .foot-2 {
-    background-color: skyblue;
+    display: none;
+    padding-bottom: 1em;
+    align-self: flex-end;
 }
 
 .foot-3 {
