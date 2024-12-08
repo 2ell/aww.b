@@ -1,6 +1,7 @@
 body {
     --rgb-accent: var(--rgb-mauve);
-    --mono-bg: rgb(28, 28, 41);
+    --uni-dark: rgb(28, 28, 41);
+    --uni-light: rgb(231, 236, 255);
     --icon-xs: 14px;
     --icon-s: 16px;
     --icon-m: 18px;
@@ -27,6 +28,9 @@ body {
 
     --text: rgb(17, 17, 27);
     --muted: rgb(124, 127, 147);
+
+    --yellow: rgb(249, 226, 175);
+    --rgb-yellow: 249, 226, 175;
 
     --blue: rgb(30, 102, 245);
     --mauve: rgb(136, 57, 239);

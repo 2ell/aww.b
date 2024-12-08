@@ -1,10 +1,23 @@
 ---
 layout: base.njk
 ---
+
 <div class="post__header">
+
 <h1 class="post__title">{{ title }}</h1>
-<div>
-<div class="post__date"><strong>{{ page.date | formatDate('MMM D, YYYY') }}</strong></div>
+
+<div class="post__date">
+
+    <span class="post__published">published <strong>{{ page.date | formatDate('MMMM D, YYYY')  }}</strong>
+    </span>
+
+    {% if edited %}
+    <span>
+    <span class="icon-edit">
+        {% icon "lucide:file-pen-line" %} 
+        </span>edited {{ page.edited | formatDate('MMM D, YYYY')  }}
+    </span>
+    {% endif %}
 </div>
 </div>
 
@@ -14,3 +27,17 @@ layout: base.njk
 </article>
 </div>
 
+<hr class="spacer">
+
+<div class="post__info">
+{% if edited %}
+<div class="edit__date">
+    <span class="post__edited">Edited <strong>{{ page.edited | formatDate('MMM D, YYYY')  }}</strong></span>
+    {% if editReason %}
+        <span class="edit-note">
+            <i>{{ editReason }}</i>
+            </span>
+    {% endif %}
+</div>
+    {% endif %}
+</div>

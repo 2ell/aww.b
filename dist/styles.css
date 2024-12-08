@@ -43,9 +43,53 @@ img + :is(p) {
   color: var(--subtext);
 }
 
+a.footnote {
+  color: var(--uni-dark);
+  text-decoration: none;
+  background-color: var(--yellow);
+  border-radius: 20%;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-right: 2px;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+a.footnote span {
+  z-index: -1;
+  opacity: 0;
+  display: none;
+}
+
+a.footnote:hover {
+  border-bottom: 0;
+}
+a.footnote:hover span {
+  font-size: 0.9em;
+  z-index: 1;
+  position: absolute;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  padding: 0.3em 1em 0.4em;
+  border-bottom: 1px;
+  right: 4ch;
+  left: 20ch;
+  background: var(--yellow);
+  color: var(--uni-dark);
+  box-shadow: 0 0 1em rgba(5, 5, 5, 0.1);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
 body {
   --rgb-accent: var(--rgb-mauve);
-  --mono-bg: rgb(28, 28, 41);
+  --uni-dark: rgb(28, 28, 41);
+  --uni-light: rgb(231, 236, 255);
   --icon-xs: 14px;
   --icon-s: 16px;
   --icon-m: 18px;
@@ -71,6 +115,8 @@ body {
   --mantle: rgb(220, 224, 232);
   --text: rgb(17, 17, 27);
   --muted: rgb(124, 127, 147);
+  --yellow: rgb(249, 226, 175);
+  --rgb-yellow: 249, 226, 175;
   --blue: rgb(30, 102, 245);
   --mauve: rgb(136, 57, 239);
 }
@@ -251,20 +297,44 @@ footer .icon-heart svg {
 }
 
 .post__header {
-  max-width: 65em;
+  max-width: 60em;
   margin: 0 auto;
   padding: 0 0 3em 0;
 }
 
 .post__title {
-  padding: 0 0 0.5em 0;
-  margin: 0 1em 0 1em;
-  border-bottom: 1px solid currentColor;
+  margin: 0.5em;
 }
 
 .post__date {
-  margin: 0 2em 0 1em;
-  text-align: right;
+  border-top: 1px solid var(--text);
+  margin: 1em 1em 0 1em;
+  justify-content: flex-end;
+  gap: 1em;
+  display: flex;
+}
+
+.post__info {
+  max-width: 60em;
+  display: none;
+  margin: 0 auto;
+}
+
+hr.spacer {
+  margin-top: 2em;
+  border: 0;
+}
+
+.icon-edit svg {
+  height: 1em;
+  width: 1em;
+}
+
+.edit__date {
+  line-height: 1.2em;
+}
+.edit__date .edit-note {
+  display: block;
 }
 
 * {
