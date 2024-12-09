@@ -1,18 +1,18 @@
 footer {
-    background-color: var(--mantle);
-    width: 100%;
     font-size: 0.9em;
     & .icon-heart svg {
         fill: var(--pink);
+        stroke: none;
         height: 1em;
         width: 1em;
     }
-}
+    }
 
 .foot-bar {
+    background-color: var(--crust);
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+    padding: 1em 1em 0 1em;
 }
 
 .foot-1 {
@@ -20,6 +20,9 @@ footer {
         list-style-type: none;
         margin: 0;
         padding-left: 0;
+    & a {
+        text-transform: lowercase;
+    }
     }
 }
 
@@ -31,4 +34,10 @@ footer {
 
 .foot-3 {
     text-align: right;
+    & p:first-child {
+        margin-top: 7em;
+    }
+    & p:last-child {
+        display: none;
+    }
 }

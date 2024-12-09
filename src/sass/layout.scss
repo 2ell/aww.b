@@ -47,8 +47,8 @@ main {
 a.footnote {
   color: var(--uni-dark);
     text-decoration:none;
-    background-color: var(--yellow);
-    border-radius: 20%;
+    background-color: var(--lavender);
+    border-radius: 40%;
     margin-left: 2px;
     margin-right: 2px;
     padding-left: 2px;
@@ -76,10 +76,10 @@ a.footnote {
     opacity: 1;
     visibility: visible;
     padding: 0.3em 1em 0.4em;
-    border-bottom: 1px;
+    border-bottom: 0px;
     right: 4ch;
     left: 20ch;
-    background: var(--yellow);
+    background: var(--lavender);
     color: var(--uni-dark);
     box-shadow: 0 0 1em rgba(5, 5, 5, 0.1);
     border-radius: 3px;

@@ -1,12 +1,7 @@
 body {
-    --rgb-accent: var(--rgb-mauve);
     --uni-dark: rgb(28, 28, 41);
     --uni-light: rgb(231, 236, 255);
-    --icon-xs: 14px;
-    --icon-s: 16px;
-    --icon-m: 18px;
-    --icon-l: 18px;
-    --icon-xl: 32px;
+    --g1: linear-gradient(90deg, rgba(var(--rgb-yellow), 1) 0%, rgba(var(--rgb-lavender), 1) 25%, rgba(var(--rgb-teal), 1) 50%, rgba(var(--rgb-pink), 1) 75%), rgba(var(--rgb-peach), 1) 100%;
 }
 
 #dark-light-toggle button {
@@ -23,8 +18,8 @@ body {
   }
 
   [data-theme="light"] {
-    --crust: rgb(231, 236, 255);
-    --mantle: rgb(220, 224, 232);
+    --crust: rgb(220, 224, 232);
+    --mantle: rgb(204, 208, 218);
     --base: rgb(239, 241, 245);
 
     --text: rgb(76, 79, 105);
@@ -52,6 +47,20 @@ body {
     --sapphire: rgb(32, 159, 181);
     --blue: rgb(30, 102, 245);
     --lavender: rgb(114, 135, 253);
+    --rgb-rosewater: 220, 138, 120;
+    --rgb-flamingo: 221, 120, 120;
+    --rgb-pink: 234, 118, 203;
+    --rgb-mauve: 136, 57, 239;
+    --rgb-red: 210, 15, 57;
+    --rgb-maroon: 230, 69, 83;
+    --rgb-peach: 254, 100, 11;
+    --rgb-yellow: 223, 142, 29;
+    --rgb-green: 64, 160, 43;
+    --rgb-teal: 23, 146, 153;
+    --rgb-sky: 4, 165, 229;
+    --rgb-sapphire: 32, 159, 181;
+    --rgb-blue: 30, 102, 245;
+    --rgb-lavender: 114, 135, 253;
 
     & .dark {
         display: none;
